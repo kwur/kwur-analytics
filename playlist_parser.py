@@ -1,4 +1,4 @@
-import csv, requests
+import csv, requests, datetime
 from bs4 import BeautifulSoup
 from config import config
 
@@ -22,7 +22,7 @@ payload = {
 	"whichform": "dump",
 	"what": "days",
 	"what1": "31",
-	"what2": "2017-12-06",
+	"what2": datetime.date.today().strftime("%Y-%m-%d"),
 	"fields[]": [ 
 		"awholename",
 		"s.songname",
